@@ -1,12 +1,18 @@
 <?php
 class Html {
-	
+
+	/*
+	 * Set varibale
+	 */
 	private $html;
 	private $result;
 	private $options;
 	private $selected;
 	private $attributes;
-	
+
+	/*
+	 * Create style or javascript
+	 */
 	public function head($type = null, $url = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -24,6 +30,9 @@ class Html {
 		return $this->result;
 	}
 	
+	/*
+	 * Create text bold
+	 */
 	public function bold($text = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -34,7 +43,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create text heading 1 - 6
+	 */
 	public function heading($level = 1, $text = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -45,7 +57,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create link or anchor
+	 */
 	public function link($url = null, $text = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -56,7 +71,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create img
+	 */
 	public function img($src = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -67,7 +85,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create hr
+	 */
 	public function hr($count = 1) {
 		$this->result = null;
 	
@@ -77,7 +98,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create br
+	 */	
 	public function br($count = 1) {
 		$this->result = null;
 	
@@ -87,7 +111,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create &nbsp;
+	 */	
 	public function nbs($count = 1) {
 		$this->result = null;
 	
@@ -97,7 +124,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create form open
+	 */	
 	public function form_open($action = null, $method = 'GET', $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -108,11 +138,17 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create form close
+	 */	
 	public function form_close() {
 		return '</form>';
 	}
-	
+
+	/*
+	 * Create textbox type hidden
+	 */	
 	public function hidden($name = null, $value = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -123,7 +159,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create textbox type text
+	 */
 	public function text($name = null, $value = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -134,7 +173,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create textarea
+	 */
 	public function textarea($name = null, $text = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -145,7 +187,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create textbox type password
+	 */
 	public function password($name = null, $value = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -157,6 +202,9 @@ class Html {
 		return $this->result;
 	}
 	
+	/*
+	 * Create textbox type number
+	 */
 	public function number($name = null, $value = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -167,7 +215,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create textbox type date
+	 */
 	public function date($name = null, $value = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -178,7 +229,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create textbox type time
+	 */
 	public function time($name = null, $value = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -189,7 +243,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create textbox type url
+	 */
 	public function url($name = null, $value = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -200,7 +257,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create textbox type file
+	 */
 	public function file($name = null, $value = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -211,7 +271,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create textbox type radio
+	 */
 	public function radio($name = null, $value = null, $text = null, $checked = false, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -227,7 +290,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create textbox type checkbox
+	 */
 	public function checkbox($name = null, $value = null, $text = null, $checked = false, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -243,7 +309,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create select
+	 */
 	public function select($name = null, $selected = null, $options = array(), $attributes = null) {
 		$this->selected = $selected;
 		$this->options = $options;
@@ -258,7 +327,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Create button type button, submit or reset
+	 */
 	public function button($type = 'submit', $text = null, $attributes = null) {
 		$this->attributes = $attributes;
 	
@@ -269,7 +341,10 @@ class Html {
 	
 		return $this->result;
 	}
-	
+
+	/*
+	 * Set option in function select
+	 */
 	private function get_options() {
 		$this->html = null;
 	
@@ -284,6 +359,9 @@ class Html {
 		return $this->html;
 	}
 	
+	/*
+	 * Set attribute in all function
+	 */
 	private function get_attributes() {
 		$this->html = null;
 	
